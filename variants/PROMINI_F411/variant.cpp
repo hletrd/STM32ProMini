@@ -72,9 +72,6 @@ const uint32_t analogInputPin[] = {
   24, //A7
   25, //A8
   26, //A9
-  27, //A10
-  28, //A11
-  29  //A12
 };
 
 #ifdef __cplusplus
