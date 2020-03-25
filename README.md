@@ -7,6 +7,8 @@
 ### ProMini F411
 * Based on STM32F411CEU6 MCU
 * PB11 is disabled in this variant, being used to connect a capacitor to supply internal voltage.
+
+#### BOM
 * 2.2uF or 4.7uF ceramic capacitor with low ESR have to placed on C13.
 * USB pull-up resistor R1 is not needed. (The MCU integrates pull-up resistor for USB D+.)
 
