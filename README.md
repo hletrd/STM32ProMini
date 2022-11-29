@@ -17,15 +17,16 @@
     - Thickness: 1.0mm
     - Surface finish: LeadFree HASL
   - All parts can be placed with included BOM/CPL file.
-### Get a free board
-- Leave a issue and I may send you a free STM32 Pro Mini board.
 
-## Variants and geenrations
-| Gen | CPU         | Variants                          | Features                                                                                                      | Board peripheral   |   |
+### Get a free board
+- Leave an issue and I may send you a free STM32 Pro Mini board.
+
+## Variants and generations
+| Gen | CPU         | Variants                          | Features                                                                                                      | Board peripheral   | Default BOOT configuration  |
 |-----|-------------|-----------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------|---|
-| 1   | STM32F103Cx | V1 (STM32F103C8), V3 (STM32F103CB) | 8MHz ±20ppm HSE, Compatible with common 'Blue Pill' development boards.                                            | None               |   |
-| 2   | STM32F411CE | V2 (STM32F411CE)                  | 8MHz ±20ppm HSE                                                                                               | Removable USB port |   |
-| 3   | STM32F411CE | V4 (STM32F411CE), V5 (STM32F411CE) | 12MHz ±10ppm HSE, 32.768kHz ±20ppm LSE (v5 only), A dedicated analog power rail with noise supression (v5 only) | Removable USB port |   |
+| 1   | STM32F103Cx | V1 (STM32F103C8), V3 (STM32F103CB) | 8MHz ±20ppm HSE, Compatible with common 'Blue Pill' development boards.                                            | None               | BOOT0 (0) BOOT1 (0)  |
+| 2   | STM32F411CE | V2 (STM32F411CE)                  | 8MHz ±20ppm HSE                                                                                               | Removable USB port | BOOT0 (0) BOOT1 (0)  |
+| 3   | STM32F411CE | V4 (STM32F411CE), V5 (STM32F411CE) | 12MHz ±10ppm HSE, 32.768kHz ±20ppm LSE (v5 only), A dedicated analog power rail with noise supression (v5 only) | Removable USB port | BOOT0 (0) BOOT1 (0)  |
 
 ### ProMini 3rd gen (F411 (V4, V5))
 * All-new redesigned STM32 Pro Mini dev board
