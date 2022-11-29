@@ -20,20 +20,18 @@
 ### Get a free board
 - Leave a issue and I may send you a free STM32 Pro Mini board.
 
-  
 ## Variants and geenrations
 | Gen | CPU         | Variants                          | Features                                                                                                      | Board peripheral   |   |
 |-----|-------------|-----------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------|---|
-| 1   | STM32F103Cx | V1 (STM32F103C8), V3(STM32F103CB) | 8MHz ±20ppm Compatible with common 'Blue Pill' development boards.                                            | None               |   |
+| 1   | STM32F103Cx | V1 (STM32F103C8), V3 (STM32F103CB) | 8MHz ±20ppm HSE, Compatible with common 'Blue Pill' development boards.                                            | None               |   |
 | 2   | STM32F411CE | V2 (STM32F411CE)                  | 8MHz ±20ppm HSE                                                                                               | Removable USB port |   |
-| 3   | STM32F411CE | V4 (STM32F411CE), V5(STM32F411CE) | 12MHz ±10ppm HSE 32.768kHz ±20ppm LSE (v5 only) A dedicated analog power rail with noise supression (v5 only) | Removable USB port |   |
+| 3   | STM32F411CE | V4 (STM32F411CE), V5 (STM32F411CE) | 12MHz ±10ppm HSE, 32.768kHz ±20ppm LSE (v5 only), A dedicated analog power rail with noise supression (v5 only) | Removable USB port |   |
 
 ### ProMini 3rd gen (F411 (V4, V5))
-* All-new designed STM32 Pro Mini dev board
-* A dedicated analog voltage supply for noise rejection (V5 only)
+* All-new redesigned STM32 Pro Mini dev board
+* A dedicated analog voltage supply for noise reduction (V5 only)
 * Ultra low noise, low Iq LDO regulator added to minimize static power draw. (V5 only)
 * LSE crystal added (V5 only)
-
 * PB11 pin is removed and additional GND pin is added.
 
 ### ProMini 2nd gen (F411 (V2))
