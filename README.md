@@ -5,6 +5,8 @@
 
 - Two main devices are being supported as of now, one with STM32F103Cx and the other with STM32F411Cx.
 
+<img src="pictures/pinmap.png" alt="" style="background-color: white;">
+
 <img src="pictures/back.png" alt= "" width="49%"><img src="pictures/front.png" alt= "" width="49%">
 
 ## Getting a board
