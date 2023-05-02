@@ -5,8 +5,7 @@
 
 - Two main devices are being supported as of now, one with STM32F103Cx and the other with STM32F411Cx.
 
-<img src="pictures/back.png" alt= "" width="49%">
-<img src="pictures/front.png" alt= "" width="49%">
+<img src="pictures/back.png" alt= "" width="49%"><img src="pictures/front.png" alt= "" width="49%">
 
 ## Getting a board
 ### Manufacture yourself
@@ -31,11 +30,11 @@
 | 2 | STM32F411CE | V2 | 8MHz ±20ppm HSE | Removable USB port | BOOT0 (0) BOOT1 (0) |
 | 3 | STM32F411CE | V4, V5, V6 | 12MHz ±10ppm HSE, 32.768kHz ±20ppm LSE (V5, V6), A dedicated analog power rail with noise supression (V5, V6), Castellated edges (V6 only) | Removable USB port | BOOT0 (0) BOOT1 (0) |
 
-### ProMini 3rd gen (F411 (V4, V5))
-* All-new redesigned STM32 Pro Mini dev board
-* A dedicated analog voltage supply for noise reduction (V5 only)
-* Ultra low noise, low Iq LDO regulator added to minimize static power draw. (V5 only)
-* LSE crystal added (V5 only)
+### ProMini 3rd gen (F411 (V4, V5, V6))
+* Fully redesigned STM32 Pro Mini dev board
+* A dedicated analog voltage supply for noise reduction (from V5 and afterwards)
+* Ultra low noise, low Iq LDO regulator added to minimize static power draw. (from V5 and afterwards)
+* LSE crystal added (from V5 and afterwards)
 * PB11 pin is removed and additional GND pin is added.
 
 ### ProMini 2nd gen (F411 (V2))
