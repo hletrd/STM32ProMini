@@ -1,11 +1,13 @@
 /*
-*****************************************************************************
+******************************************************************************
 **
 
 **  File        : LinkerScript.ld
 **
-**  Abstract    : Linker script for STM32F411CETx Device with
-**                512KByte FLASH, 128KByte RAM
+**  Author		: STM32CubeMX
+**
+**  Abstract    : Linker script for STM32F411CEUx series
+**                512Kbytes FLASH and 128Kbytes RAM
 **
 **                Set heap size, stack size and stack location according
 **                to application requirements.
@@ -14,14 +16,13 @@
 **
 **  Target      : STMicroelectronics STM32
 **
-**
-**  Distribution: The file is distributed as is, without any warranty
+**  Distribution: The file is distributed “as is,” without any warranty
 **                of any kind.
 **
 *****************************************************************************
 ** @attention
 **
-** <h2><center>&copy; COPYRIGHT(c) 2014 Ac6</center></h2>
+** <h2><center>&copy; COPYRIGHT(c) 2019 STMicroelectronics</center></h2>
 **
 ** Redistribution and use in source and binary forms, with or without modification,
 ** are permitted provided that the following conditions are met:
@@ -30,7 +31,7 @@
 **   2. Redistributions in binary form must reproduce the above copyright notice,
 **      this list of conditions and the following disclaimer in the documentation
 **      and/or other materials provided with the distribution.
-**   3. Neither the name of Ac6 nor the names of its contributors
+**   3. Neither the name of STMicroelectronics nor the names of its contributors
 **      may be used to endorse or promote products derived from this software
 **      without specific prior written permission.
 **
@@ -52,7 +53,7 @@
 ENTRY(Reset_Handler)
 
 /* Highest address of the user mode stack */
-_estack = 0x20020000;    /* end of RAM */
+_estack = ORIGIN(RAM) + LENGTH(RAM);    /* end of RAM */
 /* Generate a link error if heap and stack don't fit into RAM */
 _Min_Heap_Size = 0x200;      /* required amount of heap  */
 _Min_Stack_Size = 0x400; /* required amount of stack */
@@ -76,7 +77,7 @@ SECTIONS
   } >FLASH
 
   /* The program code and other data goes into FLASH */
-  .text ALIGN(4):
+  .text :
   {
     . = ALIGN(4);
     *(.text)           /* .text sections (code) */

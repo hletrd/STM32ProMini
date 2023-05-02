@@ -1,7 +1,0 @@
-# STM32 Pro Mini F411
-GenF4.menu.pnum.PROMINI_F411=STM32 Pro Mini F411
-GenF4.menu.pnum.PROMINI_F411.upload.maximum_size=524288
-GenF4.menu.pnum.PROMINI_F411.upload.maximum_data_size=131072
-GenF4.menu.pnum.PROMINI_F411.build.board=PROMINI_F411
-GenF4.menu.pnum.PROMINI_F411.build.product_line=STM32F411xE
-GenF4.menu.pnum.PROMINI_F411.build.variant=PROMINI_F411

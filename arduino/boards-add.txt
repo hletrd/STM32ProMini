@@ -1,0 +1,105 @@
+################################################################################
+# STM32 Custom Boards
+
+Custom.name=Custom Boards
+
+Custom.build.core=arduino
+Custom.build.board=Custom
+Custom.build.st_extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} {build.bootloader_flags}
+Custom.build.mcu=cortex-m4
+Custom.build.fpu=-mfpu=fpv4-sp-d16
+Custom.build.float-abi=-mfloat-abi=hard
+Custom.build.series=STM32F4xx
+Custom.build.cmsis_lib_gcc=arm_cortexM4lf_mathc
+
+# STM32 Pro Mini F411
+
+Custom.menu.pnum.PROMINI_F411=ProMini F411CE
+Custom.menu.pnum.PROMINI_F411.upload.maximum_size=524288
+Custom.menu.pnum.PROMINI_F411.upload.maximum_data_size=131072
+Custom.menu.pnum.PROMINI_F411.build.board=PROMINI_F411
+Custom.menu.pnum.PROMINI_F411.build.product_line=STM32F411xE
+Custom.menu.pnum.PROMINI_F411.build.variant=Custom/PROMINI_F411
+Custom.menu.pnum.PROMINI_F411.build.variant_h=variant.h
+
+Custom.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
+Custom.menu.upload_method.swdMethod.upload.protocol=0
+Custom.menu.upload_method.swdMethod.upload.options=-g
+Custom.menu.upload_method.swdMethod.upload.tool=stm32CubeProg
+
+Custom.menu.upload_method.serialMethod=STM32CubeProgrammer (Serial)
+Custom.menu.upload_method.serialMethod.upload.protocol=1
+Custom.menu.upload_method.serialMethod.upload.options={serial.port.file} -s
+Custom.menu.upload_method.serialMethod.upload.tool=stm32CubeProg
+
+Custom.menu.upload_method.dfuMethod.upload.protocol=2
+Custom.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
+Custom.menu.upload_method.dfuMethod.upload.options=-g
+Custom.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
+
+Custom.menu.upload_method.bmpMethod=BMP (Black Magic Probe)
+Custom.menu.upload_method.bmpMethod.upload.protocol=gdb_bmp
+Custom.menu.upload_method.bmpMethod.upload.tool=bmp_upload
+
+Custom.menu.upload_method.hidMethod=HID Bootloader 2.2
+Custom.menu.upload_method.hidMethod.upload.protocol=hid22
+Custom.menu.upload_method.hidMethod.upload.tool=hid_upload
+Custom.menu.upload_method.hidMethod.build.flash_offset=0x4000
+Custom.menu.upload_method.hidMethod.build.bootloader_flags=-DBL_HID -DVECT_TAB_OFFSET={build.flash_offset}
+
+Custom.menu.xserial.generic=Enabled (generic 'Serial')
+Custom.menu.xserial.none=Enabled (no generic 'Serial')
+Custom.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
+Custom.menu.xserial.disabled=Disabled (no Serial support)
+Custom.menu.xserial.disabled.build.xSerial=
+
+Custom.menu.usb.none=None
+Custom.menu.usb.CDCgen=CDC (generic 'Serial' supersede U(S)ART)
+Custom.menu.usb.CDCgen.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC
+Custom.menu.usb.CDC=CDC (no generic 'Serial')
+Custom.menu.usb.CDC.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC -DDISABLE_GENERIC_SERIALUSB
+Custom.menu.usb.HID=HID (keyboard and mouse)
+Custom.menu.usb.HID.build.enable_usb={build.usb_flags} -DUSBD_USE_HID_COMPOSITE
+Custom.menu.xusb.FS=Low/Full Speed
+Custom.menu.xusb.HS=High Speed
+Custom.menu.xusb.HS.build.usb_speed=-DUSE_USB_HS
+Custom.menu.xusb.HSFS=High Speed in Full Speed mode
+Custom.menu.xusb.HSFS.build.usb_speed=-DUSE_USB_HS -DUSE_USB_HS_IN_FS
+
+Custom.menu.opt.osstd=Smallest (-Os default)
+Custom.menu.opt.oslto=Smallest (-Os) with LTO
+Custom.menu.opt.oslto.build.flags.optimize=-Os -flto
+Custom.menu.opt.o1std=Fast (-O1)
+Custom.menu.opt.o1std.build.flags.optimize=-O1
+Custom.menu.opt.o1lto=Fast (-O1) with LTO
+Custom.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+Custom.menu.opt.o2std=Faster (-O2)
+Custom.menu.opt.o2std.build.flags.optimize=-O2
+Custom.menu.opt.o2lto=Faster (-O2) with LTO
+Custom.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+Custom.menu.opt.o3std=Fastest (-O3)
+Custom.menu.opt.o3std.build.flags.optimize=-O3
+Custom.menu.opt.o3lto=Fastest (-O3) with LTO
+Custom.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+Custom.menu.opt.ogstd=Debug (-Og)
+Custom.menu.opt.ogstd.build.flags.optimize=-Og
+Custom.menu.opt.o0std=No Optimization (-O0)
+Custom.menu.opt.o0std.build.flags.optimize=-O0
+
+Custom.menu.dbg.none=None
+Custom.menu.dbg.enable_sym=Symbols Enabled (-g)
+Custom.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
+Custom.menu.dbg.enable_log=Core logs Enabled
+Custom.menu.dbg.enable_log.build.flags.debug=
+Custom.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
+Custom.menu.dbg.enable_all.build.flags.debug=-g
+
+Custom.menu.rtlib.nano=Newlib Nano (default)
+Custom.menu.rtlib.nanofp=Newlib Nano + Float Printf
+Custom.menu.rtlib.nanofp.build.flags.ldspecs=--specs=nano.specs -u _printf_float
+Custom.menu.rtlib.nanofs=Newlib Nano + Float Scanf
+Custom.menu.rtlib.nanofs.build.flags.ldspecs=--specs=nano.specs -u _scanf_float
+Custom.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
+Custom.menu.rtlib.nanofps.build.flags.ldspecs=--specs=nano.specs -u _printf_float -u _scanf_float
+Custom.menu.rtlib.full=Newlib Standard
+Custom.menu.rtlib.full.build.flags.ldspecs=
