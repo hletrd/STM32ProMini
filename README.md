@@ -1,9 +1,12 @@
-# STM32ProMini
+# STM32 Pro Mini
 - STM32 Pro Mini dev board
 - Based on STM32F411CEU6 MCU (100MHz ARM Cortex M4 CPU, 512kB Flash, 128kB SRAM) or STM32F103CxT6 MCU (72MHz ARM Cortex M3 CPU, 64kB/128kB Flash, 20kB SRAM)
   - Virtually support all 48 pin packaged(LQFP48, UFQFPN48, ...) STM32 MCUs.
 
 - Two main devices are being supported as of now, one with STM32F103Cx and the other with STM32F411Cx.
+
+<img src="pictures/back.png" alt= "" width="49%">
+<img src="pictures/front.png" alt= "" width="49%">
 
 ## Getting a board
 ### Manufacture yourself
@@ -15,18 +18,18 @@
     - Layers: 2
     - PCB color / silk color: Any
     - Thickness: 1.0mm
-    - Surface finish: LeadFree HASL
+    - Surface finish: LeadFree HASL or ENIG
   - All parts can be placed with included BOM/CPL file.
 
 ### Get a free board
 - Leave an issue and I may send you a free STM32 Pro Mini board.
 
 ## Variants and generations
-| Gen | CPU         | Variants                          | Features                                                                                                      | Board peripheral   | Default BOOT configuration  |
-|-----|-------------|-----------------------------------|---------------------------------------------------------------------------------------------------------------|--------------------|---|
-| 1   | STM32F103Cx | V1 (STM32F103C8), V3 (STM32F103CB) | 8MHz ±20ppm HSE, Compatible with common 'Blue Pill' development boards.                                            | None               | BOOT0 (0) BOOT1 (0)  |
-| 2   | STM32F411CE | V2 (STM32F411CE)                  | 8MHz ±20ppm HSE                                                                                               | Removable USB port | BOOT0 (0) BOOT1 (0)  |
-| 3   | STM32F411CE | V4 (STM32F411CE), V5 (STM32F411CE) | 12MHz ±10ppm HSE, 32.768kHz ±20ppm LSE (v5 only), A dedicated analog power rail with noise supression (v5 only) | Removable USB port | BOOT0 (0) BOOT1 (0)  |
+| Gen | CPU | Versions | Features | Board peripheral | Default BOOT configuration |
+|-|-|-|-|-|-|
+| 1 | STM32F103Cx | V1 (STM32F103C8), V3 (STM32F103CB) | 8MHz ±20ppm HSE, Compatible with common 'Blue Pill' development boards. | None | BOOT0 (0) BOOT1 (0) |
+| 2 | STM32F411CE | V2 | 8MHz ±20ppm HSE | Removable USB port | BOOT0 (0) BOOT1 (0) |
+| 3 | STM32F411CE | V4, V5, V6 | 12MHz ±10ppm HSE, 32.768kHz ±20ppm LSE (V5, V6), A dedicated analog power rail with noise supression (V5, V6), Castellated edges (V6 only) | Removable USB port | BOOT0 (0) BOOT1 (0) |
 
 ### ProMini 3rd gen (F411 (V4, V5))
 * All-new redesigned STM32 Pro Mini dev board
@@ -53,5 +56,8 @@
 
 ## Setup for Arduino IDE
 - Install STM32duino package along with STM32CubeProgrammer.
-- Add ```./variants/PROMINI_F411``` directory to Arduino IDE ```packages/STM32/hardware/stm32/(version)/variants``` directory.
+- Add ```./variants/PROMINI_F411``` (V3-V4) or ```./variants/PROMINI_F411_V5``` (V5, V6)  directory to Arduino IDE ```packages/STM32/hardware/stm32/(version)/variants``` directory.
 - Add the content of ```boards-add.txt``` to ```packages/STM32/hardware/stm32/(version)/boards.txt```.
+
+### Programming
+- [USB HID bootloader fork](https://github.com/hletrd/STM32_HID_Bootloader) may be used to upload using the integrated USB port.
