@@ -1,5 +1,7 @@
 # STM32 Pro Mini
 - STM32 Pro Mini dev board
+  - 17.8 x 33mm size (excluding USB port)
+  - 28 GPIOs
 - Based on STM32F411CEU6 MCU (100MHz ARM Cortex M4 CPU, 512kB Flash, 128kB SRAM) or STM32F103CxT6 MCU (72MHz ARM Cortex M3 CPU, 64kB/128kB Flash, 20kB SRAM)
   - Virtually support all 48 pin packaged(LQFP48, UFQFPN48, ...) STM32 MCUs.
 
