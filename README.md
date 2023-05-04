@@ -12,7 +12,7 @@
 ## Getting a board
 ### Manufacture yourself
   - You can manufacture your own STM32 Pro Mini board with provided files in this repo.
-  - Use gerber files in [fabrication/gerber/v4-v5](fabrication/gerber/v4-v5) directory.
+  - Use gerber files in [fabrication/gerber/v6](fabrication/gerber/v6) directory.
   - Use BOM and CPL(Pick&Place) files included in [fabrication](fabrication) directory.
   - Recommended board specifications:
     - Material: FR-4
