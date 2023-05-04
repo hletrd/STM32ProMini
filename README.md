@@ -21,7 +21,7 @@
     - Layers: 2
     - PCB color / silk color: Any
     - Thickness: 1.0mm
-    - Surface finish: LeadFree HASL or ENIG
+    - Surface finish: ENIG
   - All parts can be placed with included BOM/CPL file.
 
 ### Get a free board
