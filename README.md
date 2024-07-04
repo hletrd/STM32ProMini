@@ -59,8 +59,10 @@
 
 #### Schematic
 ![Schematic](schematic/schematic.png)
-
 [PDF version](schematic/schematic.pdf)
+
+#### PCB layout
+<img src="schematic/pcb_top.png" alt= "PCB layout (front)" width="49%"><img src="schematic/pcb_bottom.png" alt= "PCB layout (back)" width="49%">
 
 
 ## Setup for Arduino IDE
