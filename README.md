@@ -57,6 +57,12 @@
 * C13 is not needed in F103 variant.
 * An 1.5k pull-up resistor R1 for USB D+ is needed.
 
+#### Schematic
+![Schematic](schematic/schematic.png)
+
+[PDF version](schematic/schematic.pdf)
+
+
 ## Setup for Arduino IDE
 - Install STM32duino package along with STM32CubeProgrammer.
 - Add ```./variants/PROMINI_F411``` (V3-V4) or ```./variants/PROMINI_F411_V5``` (V5, V6)  directory to Arduino IDE ```packages/STM32/hardware/stm32/(version)/variants``` directory.
