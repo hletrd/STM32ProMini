@@ -72,3 +72,6 @@
 
 ### Programming
 - [USB HID bootloader fork](https://github.com/hletrd/STM32_HID_Bootloader) may be used to upload using the integrated USB port.
+
+### Tutorial
+- [Getting started with STM32 Pro Mini](TUTORIAL.md)
