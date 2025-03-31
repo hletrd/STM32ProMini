@@ -11,6 +11,12 @@ Custom.build.fpu=-mfpu=fpv4-sp-d16
 Custom.build.float-abi=-mfloat-abi=hard
 Custom.build.series=STM32F4xx
 Custom.build.cmsis_lib_gcc=arm_cortexM4lf_mathc
+Custom.build.flash_offset=0x0
+Custom.upload.maximum_size=0
+Custom.upload.maximum_data_size=0
+Custom.openocd.target=stm32f4x
+Custom.vid.0=0x0483
+Custom.pid.0=0x5740
 
 # STM32 Pro Mini F411
 
@@ -24,18 +30,18 @@ Custom.menu.pnum.PROMINI_F411.build.variant_h=variant.h
 Custom.menu.pnum.PROMINI_F411.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32F4xx/STM32F411.svd
 
 Custom.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
-Custom.menu.upload_method.swdMethod.upload.protocol=0
-Custom.menu.upload_method.swdMethod.upload.options=-g
+Custom.menu.upload_method.swdMethod.upload.protocol=swd
+Custom.menu.upload_method.swdMethod.upload.options=
 Custom.menu.upload_method.swdMethod.upload.tool=stm32CubeProg
 
 Custom.menu.upload_method.serialMethod=STM32CubeProgrammer (Serial)
-Custom.menu.upload_method.serialMethod.upload.protocol=1
-Custom.menu.upload_method.serialMethod.upload.options={serial.port.file} -s
+Custom.menu.upload_method.serialMethod.upload.protocol=jlink
+Custom.menu.upload_method.serialMethod.upload.options=-c {serial.port.file}
 Custom.menu.upload_method.serialMethod.upload.tool=stm32CubeProg
 
-Custom.menu.upload_method.dfuMethod.upload.protocol=2
+Custom.menu.upload_method.dfuMethod.upload.protocol=dfu
 Custom.menu.upload_method.dfuMethod=STM32CubeProgrammer (DFU)
-Custom.menu.upload_method.dfuMethod.upload.options=-g
+Custom.menu.upload_method.dfuMethod.upload.options=-v {upload.vid} -p {upload.pid}
 Custom.menu.upload_method.dfuMethod.upload.tool=stm32CubeProg
 
 Custom.menu.upload_method.bmpMethod=BMP (Black Magic Probe)
@@ -46,7 +52,7 @@ Custom.menu.upload_method.hidMethod=HID Bootloader 2.2
 Custom.menu.upload_method.hidMethod.upload.protocol=hid22
 Custom.menu.upload_method.hidMethod.upload.tool=hid_upload
 Custom.menu.upload_method.hidMethod.build.flash_offset=0x4000
-Custom.menu.upload_method.hidMethod.build.bootloader_flags=-DBL_HID -DVECT_TAB_OFFSET={build.flash_offset}
+Custom.menu.upload_method.hidMethod.build.bootloader_flags=-DBL_HID
 
 Custom.menu.xserial.generic=Enabled (generic 'Serial')
 Custom.menu.xserial.none=Enabled (no generic 'Serial')
