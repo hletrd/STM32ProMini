@@ -140,9 +140,13 @@
 #endif
 
 // Extra HAL modules
-#if !defined(HAL_SD_MODULE_DISABLED)
-  #define HAL_SD_MODULE_ENABLED
+
+#ifndef HSE_VALUE
+  #define HSE_VALUE             12000000U
 #endif
+
+#define HAL_TIM_MODULE_ENABLED
+#define HAL_SPI_MODULE_ENABLED
 
 /*----------------------------------------------------------------------------
  *        Arduino objects - C++ only

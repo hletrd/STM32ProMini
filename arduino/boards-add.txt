@@ -21,6 +21,7 @@ Custom.menu.pnum.PROMINI_F411.build.board=PROMINI_F411
 Custom.menu.pnum.PROMINI_F411.build.product_line=STM32F411xE
 Custom.menu.pnum.PROMINI_F411.build.variant=Custom/PROMINI_F411
 Custom.menu.pnum.PROMINI_F411.build.variant_h=variant.h
+Custom.menu.pnum.PROMINI_F411.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32F4xx/STM32F411.svd
 
 Custom.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
 Custom.menu.upload_method.swdMethod.upload.protocol=0
